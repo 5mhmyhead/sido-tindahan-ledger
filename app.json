@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sido-app",
-    "slug": "sido-app",
+    "name": "Dwyane Sido",
+    "slug": "dwyane-sido",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -37,6 +37,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "588c8311-ab0c-4534-ba02-643128d2c19d"
+      }
+    },
+    "owner": "smhmyhead"
   }
 }
