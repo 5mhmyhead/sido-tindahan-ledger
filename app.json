@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Dwyane Sido",
-    "slug": "dwyane-sido",
+    "name": "Sido Tindahan Ledger",
+    "slug": "sido-tindahan-ledger",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "sidoapp",
+    "scheme": "tindahanledger",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
