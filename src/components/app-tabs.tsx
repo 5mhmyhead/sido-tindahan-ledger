@@ -23,6 +23,14 @@ export default function AppTabs() {
           renderingMode="original"
         />
       </NativeTabs.Trigger>
+
+      <NativeTabs.Trigger name="account">
+        <NativeTabs.Trigger.Label>Account</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon
+          src={require('@/assets/images/tabIcons/explore.png')}
+          renderingMode="original"
+        />
+      </NativeTabs.Trigger>
     </NativeTabs>
   );
 }

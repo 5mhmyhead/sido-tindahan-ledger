@@ -12,11 +12,13 @@ import { CustomerRow } from "@/components/customer-row";
 
 import { AddCustomerModal } from "@/components/add-customer-modal";
 import { useCustomers } from "@/hooks/use-customers";
+import { useProfile } from "@/hooks/use-profile";
 import { router } from "expo-router";
 import { useState } from "react";
 
 export default function CustomersScreen() {
   const { status, customers, problem, retry } = useCustomers();
+  const profile = useProfile();
 
   const [attempt, setAttempt] = useState(0);
   const [query, setQuery] = useState("");
@@ -75,19 +77,21 @@ export default function CustomersScreen() {
         placeholder="Search for a customer..."
         style={{ borderWidth: 1, borderRadius: 8, padding: 12 }}
       />
-      <Pressable
-        onPress={() => setAdding(true)}
-        style={{
-          backgroundColor: "#007AFF",
-          paddingVertical: 12,
-          paddingHorizontal: 24,
-          borderRadius: 12,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Text style={{ color: "#fff" }}>Add Customer</Text>
-      </Pressable>
+      {profile?.role === "admin" && (
+        <Pressable
+          onPress={() => setAdding(true)}
+          style={{
+            backgroundColor: "#007AFF",
+            paddingVertical: 12,
+            paddingHorizontal: 24,
+            borderRadius: 12,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Text style={{ color: "#fff" }}>Add Customer</Text>
+        </Pressable>
+      )} 
       <AddCustomerModal
         visible={adding}
         onClose={() => setAdding(false)}
